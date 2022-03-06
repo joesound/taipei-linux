@@ -1,8 +1,10 @@
 from flask import *
+from api.attractions import app_api_attractions
+
 app=Flask(__name__)
 app.config["JSON_AS_ASCII"]=False
 app.config["TEMPLATES_AUTO_RELOAD"]=True
-
+app.register_blueprint(app_api_attractions)
 # Pages
 @app.route("/")
 def index():
@@ -17,4 +19,4 @@ def booking():
 def thankyou():
 	return render_template("thankyou.html")
 
-app.run(port=3000)
+app.run(port=3000, debug=True)
