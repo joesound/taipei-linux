@@ -1,8 +1,4 @@
-FROM ubuntu==20.04
-
-RUN  sudo apt-get update && sudo apt-get install
-
-RUN  sudo apt install python==3.7.0 &&  sudo apt-get -y install python3-pip
+FROM python:3.7
 
 COPY . /app
 
