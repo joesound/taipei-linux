@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # ignor config
-utils/config.py
+!utils/config.py
 
 
 # Distribution / packaging

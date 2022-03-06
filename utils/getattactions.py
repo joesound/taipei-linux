@@ -24,7 +24,9 @@ def get_attraction_by_page_keyword(page,keyword):
                 data = {
                     "nextPage": page+1,
                     "data":[]
+                    
                 }
+                datas = datas[0:12]
             elif len(datas) <= 12 and len(datas)>0:
                 data = {
                     "nextPage": None,
