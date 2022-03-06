@@ -27,23 +27,22 @@ insert_tables = ["cat1", "cat2", "mrt"]
 insert_item_name = ["cat1_name", "cat2_name", "mrt_name"]
 insert_datas = [all_cat1_data, all_cat2_data, all_mrt_data]
 
+# print(len(all_bus_data))
+# # for i in all_bus_data:
+# #     # info = inset_main_data(i)
+# #     print(i)
 
-# for i in main_data:
 
-#     info = inset_main_data(i)
-#     print(i[0],info)
+# for i in range(len(all_image)):
+#     for urls in all_image[i][1]:
+#         if (".mp3" in urls) or (".flv" in urls) or (urls==""):
+#             print(urls)
+#             continue
+#         urls = "https:" + urls
+#         infor = inset_image_data(all_image[i][0],urls)
+#         print(all_image[i][0], infor)
 
-
-for i in range(len(all_image)):
-    for urls in all_image[i][1]:
-        if (".mp3" in urls) or (".flv" in urls) or (urls==""):
-            print(urls)
-            continue
-        urls = "https:" + urls
-        infor = inset_image_data(all_image[i][0],urls)
-        print(all_image[i][0], infor)
-
-# for i in range(len(all_bus_data)):
-#     info = inset_bus_data(all_bus_data[i][0],all_bus_data[i][1])
-#     print(all_bus_data[i][0], info)
+for i in range(len(all_bus_data)):
+    info = inset_bus_data(all_bus_data[i][0],all_bus_data[i][1])
+    print(all_bus_data[i][0], info)
 
