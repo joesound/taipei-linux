@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request, session, redirect, url_for, Blueprint
+from flask import Flask, render_template, request, session, redirect, url_for, Blueprint, make_response
 
 from utils.getattactions import get_attraction_by_page_keyword, get_attraction_by_id
 from utils.querystrcheck import query_str_check, query_by_id
@@ -14,7 +14,9 @@ def attractions_by_page_keyword():
     index_data_format, query_data_info = query_str_check(get_query_page,get_query_keyword)
     if index_data_format:
         query_data = get_attraction_by_page_keyword(query_data_info[0],query_data_info[1])
-        return  json.dumps(query_data)
+        response = make_response(json.dumps(query_data))
+        response.headers['Access-Control-Allow-Origin']='*'
+        return  response
     else:
         return  json.dumps(query_data_info)
 

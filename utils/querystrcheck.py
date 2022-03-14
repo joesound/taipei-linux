@@ -5,6 +5,8 @@ def query_str_check(page,keyword):
         page = 0   
     if keyword == None:
         keyword=""
+    if keyword == "null":
+        keyword=""
     try:
         page = int(page)
         return True, [page, keyword]

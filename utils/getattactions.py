@@ -19,7 +19,6 @@ def get_attraction_by_page_keyword(page,keyword):
             val=(keyword,low_limit,)
             mycursor.execute(sql, val)
             datas = mycursor.fetchall()
-            mycursor.close  
             if len(datas) > 12:
                 data = {
                     "nextPage": page+1,
@@ -50,11 +49,13 @@ def get_attraction_by_page_keyword(page,keyword):
                     "mrt": each_data[6],
                     "latitude": each_data[7],
                     "longitude": each_data[8],
-                    "images": [each_data[9]]
+                    "images": [each_data[9].split(",")]
                 }
                 data["data"].append(insert_data)
+            mycursor.close  
             return data
         except mysql.connector.Error as err:
+            print(err)
             mycursor.close
             return err
 
