@@ -55,7 +55,6 @@ def get_attraction_by_page_keyword(page,keyword):
             mycursor.close  
             return data
         except mysql.connector.Error as err:
-            print(err)
             mycursor.close
             return err
 
