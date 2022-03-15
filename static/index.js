@@ -13,7 +13,7 @@ async function get_attraction(page=0, keyword=''){
 }
 
 function creat_block(insert_data){
-    const img_ur = insert_data[0][0];
+    const img_ur = insert_data[0][0][0];
     const sceen_name = insert_data[1];
     const mrt = insert_data[2];
     const cat = insert_data[3];

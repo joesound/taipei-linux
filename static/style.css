@@ -11,7 +11,7 @@
 .main_container{
     display: grid;
     grid-template-rows: 54px 280px auto;
-    grid-template-columns: 360px ;
+    grid-template-columns: auto ;
 }
 
 
@@ -25,6 +25,7 @@
     background-color: white;
     position: fixed;
     top:0px;
+    z-index: 99;
     
 
     
@@ -49,14 +50,17 @@
     display: grid;
     grid-template-rows: 106px 37px auto;
     grid-template-columns: auto;
-    background-size: 50% 40%;
-    background-repeat: no-repeat;
-    background-position:right bottom;
-    background-image: url("https://s3-alpha-sig.figma.com/img/7f11/61f9/05b5cacde05a250ac06b6807d14ef29b?Expires=1647820800&Signature=HiKPVuRkePCI6qsX46pmenyi8z-2jIetuwcP7jQtblgK7r1gKgyajRihIiRWxP24IJI~32uy3e0FqlFtMcQcEKuJ4F6HxJICVs8AYgH2zpED1h8FEiD9AouEAW8GLOuH2iUUQUnNpMAmiKUoD3Oemd6kbjbCg3upOQeMHSEGsZqjLwi8O3HgzDF2lbQfAmNR-xyzLZre-l5O17IRlUiYj5bSjfAOSWakLSLo9wP7~UXuM~yF6hLiuHmC~VDD~7toD8jrpVXIGTc5VpwAyOtijYtYEh1NczFiYfXDLHmnymOnWTDOOXVzWMr3-1URIOognFpTnMo0DLeo5ZEHoGx9qQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
-    background-color: #66AABB;
-    position: fixed;
-    top:54px;
+    background-image: 
+    url("https://s3-alpha-sig.figma.com/img/7f11/61f9/05b5cacde05a250ac06b6807d14ef29b?Expires=1647820800&Signature=HiKPVuRkePCI6qsX46pmenyi8z-2jIetuwcP7jQtblgK7r1gKgyajRihIiRWxP24IJI~32uy3e0FqlFtMcQcEKuJ4F6HxJICVs8AYgH2zpED1h8FEiD9AouEAW8GLOuH2iUUQUnNpMAmiKUoD3Oemd6kbjbCg3upOQeMHSEGsZqjLwi8O3HgzDF2lbQfAmNR-xyzLZre-l5O17IRlUiYj5bSjfAOSWakLSLo9wP7~UXuM~yF6hLiuHmC~VDD~7toD8jrpVXIGTc5VpwAyOtijYtYEh1NczFiYfXDLHmnymOnWTDOOXVzWMr3-1URIOognFpTnMo0DLeo5ZEHoGx9qQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"),
+    linear-gradient(135deg, #AADDEE , #66AABB );
+    background-repeat: no-repeat,no-repeat;
+    background-size: 276px 148px, 100% 100%; 
+    background-position:200% bottom;
     width: 100%;
+    position: relative;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    
  
 }
 
@@ -68,6 +72,7 @@
     margin-left: 20px;
     margin-right: 20px;
     max-width: 1200px;
+    color:white
 }
 
 .main_container .header .header_words {
@@ -78,6 +83,7 @@
     margin-left: 20px;
     margin-right: 20px;
     max-width: 1200px;
+    color:white
 }
 
 .main_container .header .search_bar{
@@ -102,7 +108,7 @@
     width: 60px;
     height: 46px;
     border: none;
-    background-color: gray;
+    background-color: #448899;
     border-radius: 5px;
   }
 
@@ -116,7 +122,8 @@
 
 
 .main_content{
-    padding-top: 350px;
+    grid-row: 3/4;
+    grid-column: 1/2;
   
 }
 
@@ -151,8 +158,9 @@
     .main_container{
         display: grid;
         grid-template-rows: 54px 320px auto;
-        grid-template-columns:  auto ;
+        grid-template-columns:  auto;
         width: 100%;
+        justify-self: center;
     }
 
     .main_container .footer{
@@ -182,13 +190,11 @@
     .main_container .header{
         display: grid;
         grid-template-rows: 106px 37px auto;
-        grid-template-columns: auto;
-        background-size: 45% 70%;
-        background-image: url("https://s3-alpha-sig.figma.com/img/7f11/61f9/05b5cacde05a250ac06b6807d14ef29b?Expires=1647820800&Signature=HiKPVuRkePCI6qsX46pmenyi8z-2jIetuwcP7jQtblgK7r1gKgyajRihIiRWxP24IJI~32uy3e0FqlFtMcQcEKuJ4F6HxJICVs8AYgH2zpED1h8FEiD9AouEAW8GLOuH2iUUQUnNpMAmiKUoD3Oemd6kbjbCg3upOQeMHSEGsZqjLwi8O3HgzDF2lbQfAmNR-xyzLZre-l5O17IRlUiYj5bSjfAOSWakLSLo9wP7~UXuM~yF6hLiuHmC~VDD~7toD8jrpVXIGTc5VpwAyOtijYtYEh1NczFiYfXDLHmnymOnWTDOOXVzWMr3-1URIOognFpTnMo0DLeo5ZEHoGx9qQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
-        background-color: #66AABB;
-        position: fixed;
-        top:54px;
+        grid-template-columns: auto ;
+        background-size: 560px 240px, 100% 100%; 
+        background-position:100% bottom;
         width: 100%;
+
      
     }
     
@@ -196,9 +202,6 @@
     .main_content{
         display: flex;
         flex-wrap: wrap;
-        padding-top: 350px;
-        justify-content: center;
-
      }
 
 } 
@@ -215,23 +218,27 @@
 
   
     .main_container .footer{
-        display: flex;
+        display: grid;
+        grid-template-columns:1fr 600px 600px 1fr ;
         background-color: white;
         position: sticky;
         top:0px;
-        justify-content: space-between;
-        grid-column: 2/3;
+        grid-column: 1/4;
     }
 
-    .main_container .footer .choose_page div{
+    .main_container .footer .choose_page{
         padding-left: 20px;
+        grid-column: 3/4;
+        justify-content: right;
     }
+
 
     .page_title{
         margin: 10px;
         font-size: 30px;
         font-weight: 1000;
         color: #448899 ;
+        grid-column: 2/3;
     }
   
 
@@ -239,12 +246,8 @@
         display: grid;
         grid-template-rows: 106px 37px auto;
         grid-template-columns: 1fr 1200px 1fr;
-        background-size: 640px 320px;
         background-position:88% bottom;
-        background-image: url("https://s3-alpha-sig.figma.com/img/7f11/61f9/05b5cacde05a250ac06b6807d14ef29b?Expires=1647820800&Signature=HiKPVuRkePCI6qsX46pmenyi8z-2jIetuwcP7jQtblgK7r1gKgyajRihIiRWxP24IJI~32uy3e0FqlFtMcQcEKuJ4F6HxJICVs8AYgH2zpED1h8FEiD9AouEAW8GLOuH2iUUQUnNpMAmiKUoD3Oemd6kbjbCg3upOQeMHSEGsZqjLwi8O3HgzDF2lbQfAmNR-xyzLZre-l5O17IRlUiYj5bSjfAOSWakLSLo9wP7~UXuM~yF6hLiuHmC~VDD~7toD8jrpVXIGTc5VpwAyOtijYtYEh1NczFiYfXDLHmnymOnWTDOOXVzWMr3-1URIOognFpTnMo0DLeo5ZEHoGx9qQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
-        background-color: #66AABB;
-        position: sticky;
-        top:54px;
+        background-size: 650px 320px, 100% 100%;
         width: 100%;
         grid-column: 1/4;
       
@@ -290,7 +293,7 @@
         width: 60px;
         height: 46px;
         border: none;
-        background-color: gray;
+        background-color: #448899;
         border-radius: 5px;
       }
     
