@@ -7,7 +7,7 @@ let now_keyword = null;
 
 // fetch data
 async function get_attraction(page=0, keyword=''){
-    let response = await fetch(`http://52.73.173.92:3000/api/attractions?page=${page}&keyword=${keyword}`);
+    let response = await fetch(`http://127.0.0.1:3000/api/attractions?page=${page}&keyword=${keyword}`);
     let response_to_json = await response.json()
     return response_to_json
 }
@@ -63,9 +63,11 @@ async function render_data(attr_data){
 async function new_page_render(){
     let attractions_data = await get_attraction(page=now_page, keyword=now_keyword);
     let nextpage = 0;
+    observer.unobserve(loadingObserver)
     render_data(attractions_data);
     nextpage = attractions_data["nextPage"];
     now_page = nextpage;
+    if (nextpage != null){observer.observe(loadingObserver);}
 }
 
 
