@@ -69,7 +69,6 @@ get_input_keyword_button.addEventListener("click", (event)=>{keywordquery()})
 
 
 
-<<<<<<< HEAD
 
 function keywordquery(){
     observer.unobserve(loadingObserver);
@@ -127,10 +126,6 @@ async function queryBykeywor(state){ //state {"page:","keyword"}
 
 // fetch data for index page
 async function get_attractions(page=0, keyword=''){
-=======
-// fetch data
-async function get_attraction(page=0, keyword=''){
->>>>>>> 88d0f6f852c7533b882bcc01eb86c1fc6783dcdc
     let response = await fetch(`http://127.0.0.1:3000/api/attractions?page=${page}&keyword=${keyword}`);
     let response_to_json = await response.json()
     return response_to_json
@@ -189,30 +184,6 @@ async function render_page(attr_data){
     get_all_attraction_blocks.forEach(single_block => {
         single_block.addEventListener("click",(event)=>{redirect_to_attraction(single_block.id)})})
     }
-<<<<<<< HEAD
-=======
-}
-
-async function new_page_render(){
-    let attractions_data = await get_attraction(page=now_page, keyword=now_keyword);
-    let nextpage = 0;
-    observer.unobserve(loadingObserver)
-    render_data(attractions_data);
-    nextpage = attractions_data["nextPage"];
-    now_page = nextpage;
-    if (nextpage != null){observer.observe(loadingObserver);}
-}
-
-
-const  callback = async ([entry]) => {
-
-      // 當此圖片進入 viewport 時才載入圖片
-      if (entry && entry.isIntersecting) {
-          // 載入圖片
-        await new_page_render()
-     };
-  }
->>>>>>> 88d0f6f852c7533b882bcc01eb86c1fc6783dcdc
 
 
 
