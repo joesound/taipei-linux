@@ -25,7 +25,9 @@ def attraction_by_id(id):
     index_data_format, query_id_info = query_by_id(id)
     if index_data_format:
         data = get_attraction_by_id(query_id_info)
-        return  json.dumps(data)
+        response = make_response(json.dumps(data))
+        response.headers['Access-Control-Allow-Origin']='*'
+        return  response
     else:
         return json.dumps(query_id_info)
 

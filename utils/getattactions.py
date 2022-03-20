@@ -78,7 +78,7 @@ def get_attraction_by_id(id):
                 "mrt": datas[6],
                 "latitude": datas[7],
                 "longitude": datas[8],
-                "images": [datas[9]]}
+                "images": [datas[9].split(",")]}
             }
             return data
         else:

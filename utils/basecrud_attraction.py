@@ -1,5 +1,5 @@
 import mysql.connector
-from utils.config import SQL_USER, SQL_PASSWORD
+# from utils.config import SQL_USER, SQL_PASSWORD
  
         
 mydb = mysql.connector.connect(     #登入資料庫

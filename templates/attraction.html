@@ -4,17 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./static/style.css" />
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:3000/static/attraction.css" />
     
     <title>Document</title>
 </head>
 <body>
-    <div id="root">
-        <h1>Infinite Scroll with Intersection Observer API</h1>
-        <p>Try to scroll me!</p>
-        <div id="list"></div>
-        <div id="list-end"></div>
+    <div class="container_outer">
+        <div class="footer">
+            <div class="page_title">台北一日遊</div>
+            <div class="choose_page">
+                <div class="booking">預定行程</div>
+                <div class="signin_up">登入/註冊</div>
+            </div>
+        </div>
+        <div class="container_image">
+            <img src="https://s3-alpha-sig.figma.com/img/6778/6302/0ccc5ce8b30b3d331a45ecdf90f129e1?Expires=1648425600&Signature=AAavsQAMyAY5HD1RZd3oUXIhdTWUNEbKNf13~LGrmY8CIpHlb2uK43y7wBD7cB4FFVXLNybV-Bj0K2S1zyc2qR3nWqcCvlQPywkYcBNYUI6s5iQwWzE8fIEucAje~1OhPvkOvIo8zmWcHkxrQIkcSJTu5j0S0E5Jp~yIGUieWKm-QiMeo6TuPpj2pyr2uhkIHzFrxRoqTOnwr4MMiNEn0CWZTJJLepqEbecWf7Bd3Td6H4qaZKS486Qi-gzjAP~7sWZG12xvyEcunV3qHpL67NZyy~0w20ZKAD4OQWnt4d4MIRIQaAdvX4uRJJ4i619CWYeWMPpaQk6EUV7~JvMmzw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" class="left-buttom" id="left-buttom">
+            <img src="https://s3-alpha-sig.figma.com/img/2411/4817/bdfa2bd566c1379581f5b31c6a6a01bc?Expires=1648425600&Signature=DRnREvZRPBRck1-C562taMm4ou-QMJYyt2kn6lND687Add70OkJTqMYt4VPRVUQqi7cZWbyHvhyRl~ZhCPHtbUVuUNYK2bqeYwFF8jHZNeifbvJStaE6yXHabaqgRb7m7GR~61VTKiIKB7K-svwo3VRY7QGPny1uFszlwltSwKpf~nVyUAr-zTvcpFBbxjajOejIlfudyEg79DQUpHskQfpX8ADazmrlE02~qLWcst68l5y90PRYHXxLrBiuIw2QrXaB~2UbqcR3oVXn7aIa6MAV45jd0N1UkanlMKmik-mkzV7Wbnnb7ciKjwUCsNQuEIkCcOLXZPHvn9sEvVtgrw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" class="right-buttom" id="right-buttom">
+        </div>
+        <div class="container_oder">
+            <div class="attraction_name"></div>
+            <div class="cat_station"></div>
+            <div class="order">
+                <div>訂購導覽行程</div>
+                <div>以此景點為中心的一日行程，帶您探索城市角落故事</div>
+                <div>
+                    <p>選擇日期:</p>
+                    <input type="date" id="start" name="trip-start" value="yyyy-MM-dd"
+       min="2022-01-01" max="2100-12-31">
+                </div>
+                <div>
+                    <p>選擇時間:</p>
+                    <label class="booking_bt_container" for="morning_bt">上半天
+                    <input class="morning_bt" id="morning_bt" type="radio"  name="radio" checked="checked">
+                    <span class="checkmark" id="left-checkmark"></span>
+                </label>
+                    <label class="booking_bt_container" for="afternoon_bt">下半天
+                    <input class="afternoon_bt" id="afternoon_bt" type="radio" name="radio" >
+                    <span class="checkmark" id="right-checkmark"></span>
+                </label>
+                </div>
+                <div>
+                    <p>導覽費用:</p>
+                    <p class="tutorial_fee">新台幣2000元</p>
+                </div>
+                <div class="booking_bt">
+                    開始預訂行程
+                </div>
+            </div>
+        </div>
+        <div class="container_intro"></div>
+        <div class="container_address"><div class="container_descrip_bold">景點地址:</div><div></div></div>
+        <div class="container_transport"><div class="container_descrip_bold">交通方式:</div><div></div></div>
+        <div class="endBannar">
+            <div>COPYRIGHT © 2021 台北一日遊<div>
+        </div>
     </div>
-    <script src="./static/index.js"></script>
+    <script src="http://127.0.0.1:3000/static/attraction.js"></script>
 </body>
 </html>
