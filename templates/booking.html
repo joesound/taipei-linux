@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:3000/static/book.css" />
+    <title>台北一日遊</title>
+</head>
+<body>
+    <div class="main_container">
+        <div class="footer">
+            <div class="page_title">台北一日遊</div>
+            <div class="choose_page">
+                <div class="booking">預定行程</div>
+                <div class="signin_up" id="enter">登入/註冊</div>
+            </div>
+        </div>
+        <div class="attraction-container">
+            <div class="booking-header"></div>
+            <div class="attraction-info-container">
+                <div class="attraction-img-container">
+                    <img class="attraction-img">
+                </div>
+                <div class="attaction-info"></div>
+            </div>
+            <div class="delete-img-container">
+                <img class="delete-img" src="https://s3-alpha-sig.figma.com/img/5537/1303/f31984c7c73c46aaed1a7a1c9003277f?Expires=1649635200&Signature=Hatf~19YmoMs8MGm~jYvUP7AVP9edVdHy2Nr5aCOD3VO~FX2X2p0Y1HvbuGZBt6zuhTT2liwA8icaLcKFOdh5NA8hyrU8rtCmKXsIBEfWNFCqE0JxPx2NnquRBxpbpMuMXoYZ77wnULQPiZ~JH-P7tsekdvktcLI8-RnaBcO86eNYZJFVjmVbBOuHSJrO4Nm-WRSfR7W0Syu~IAw4K47qnsLqxQ0n4AP2vGMqwCMuP9lLWJ1McseJP79X3nhJHI7YvETVFcm9rCDnlSVfAapPYM9rFkeFF3Wg6UIb2gYuucNtGHf~K-qbh3htbzKaitzvgqmPPwguV3RjmJ~NOpn~w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA">
+            </div>
+        </div>
+        <div class="user-contact-container">
+            <div class="user-contact-title">您的聯絡資訊</div>
+            <div>
+                <label>聯絡姓名:</label>
+                <input type="text", class="inputname" placeholder="" name="name">
+            </div>
+            <div>
+                <label>連絡信箱:</label>
+                <input type="text", class="inputemail" placeholder="" name="email">
+            </div>
+            <div>
+                <label>手機號碼:</label>
+                <input type="text", class="inputphone" placeholder="" name="phone">
+            </div>
+            <div class="user-contact-end">請保持手機暢通，準時到達，導覽人員將用手機與您聯繫，務必留下正確的連絡方式。</div>
+        </div>
+        <div class="payment-container">
+            <div class="payment-title">信用卡付款資訊</div>
+            <div>
+                <label>卡片號碼:</label>
+                <input type="text", class="inputcard" placeholder="xxxx xxxx xxxx xxxx" name="card">
+            </div>
+            <div>
+                <label>過期時間:</label>
+                <input type="text", class="inputtime" placeholder="MM / YY" name="time">
+            </div>
+            <div>
+                <label>驗證密碼:</label>
+                <input type="text", class="inputverify" placeholder="CVV" name="verify">
+            </div>
+        </div>
+        <div class="final-submit-container">
+            <div class="final-submit">
+                <div class="payment-check"></div>
+                <input type="submit" , class="paybt" value="確認訂購並付款" id="paybt">
+            </div>
+        </div>
+    </div>
+    <div class="endBannar">
+        <div class="endBannar-content">COPYRIGHT © 2021 台北一日遊</div>
+    </div>
+    <div id="signinModal" class="signinModal">
+        <div class="modal-content" id="sigin-modal-content">
+            <div class="modal-header" >
+                <div class="sig-header">登入會員帳號</div>
+                <div class="close" id="close1">
+                <img src="https://s3-alpha-sig.figma.com/img/0a1f/425f/8de46cdc235bdc9b370c21e0028a68e6?Expires=1649635200&Signature=bMJrhhDp6e-nzgPNVZHpSdDssMZvThaXE62wzPArS5Zn~JtzTzrKqVvgTVJX5PskCbG40AJ3rkxXzGWkVheTJtTeR9fijBxyxNQ6XvVgd53k3gqr4oJtDfYpe62F8EYDPwPtotAtwVCJBP6qb8v2wUi2wYH824V1WoDLbtpPfMjnYFAIQVgac3qXLS2sCKtTcqyoHuLi9GYA3BURl0WDbowtDVzmQGdiOU~VFjRj8oMso7oyvxH~S6xmXJH~VznNFVhQjRP3~R0Gi4l7NPgd7~VJ3Gwwon2Ur9f-AnXM9k38fzW5q0FiRJDiobvPTOG50ZM~Rxn2Zb-Qfon9Luw-Kw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA">
+                </div>
+            </div>
+            <div class="input-block">
+                <input type="text", class="email" placeholder="輸入電子信箱" name="email" id="siginemail"><br>
+                <input type="text", class="password" placeholder="輸入密碼" name="password" id="siginpassword"><br>
+                <input type="submit" , class="sig_bt" value="登入帳戶" id="sigin_bt">
+            </div>
+            <div class="massage" id="siginmessage"></div>
+            <div class="end-text" id="end-text-sigin">還沒有帳戶?點此註冊</div>
+        </div>
+    </div>
+    <div id="signupModal" class="signupModal" >
+        <div class="modal-content" id="sigup-modal-content">
+            <div class="modal-header">
+                <div class="sig-header">註冊會員帳號</div>
+                <div class="close" id="close2">
+                <img src="https://s3-alpha-sig.figma.com/img/0a1f/425f/8de46cdc235bdc9b370c21e0028a68e6?Expires=1649635200&Signature=bMJrhhDp6e-nzgPNVZHpSdDssMZvThaXE62wzPArS5Zn~JtzTzrKqVvgTVJX5PskCbG40AJ3rkxXzGWkVheTJtTeR9fijBxyxNQ6XvVgd53k3gqr4oJtDfYpe62F8EYDPwPtotAtwVCJBP6qb8v2wUi2wYH824V1WoDLbtpPfMjnYFAIQVgac3qXLS2sCKtTcqyoHuLi9GYA3BURl0WDbowtDVzmQGdiOU~VFjRj8oMso7oyvxH~S6xmXJH~VznNFVhQjRP3~R0Gi4l7NPgd7~VJ3Gwwon2Ur9f-AnXM9k38fzW5q0FiRJDiobvPTOG50ZM~Rxn2Zb-Qfon9Luw-Kw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA">
+                </div>
+            </div>
+            <div class="input-block">
+                <input type="text", class="name" placeholder="輸入姓名" name="name" id="sigupname"><br>
+                <input type="text", class="email" placeholder="輸入電子信箱" name="email" id="sigupemail"><br>
+                <input type="text", class="password" placeholder="輸入密碼" name="password" id="siguppassword"><br>
+                <input type="submit" , class="sig_bt" value="註冊新帳戶" id="sigup_bt">
+            </div>
+            <div class="massage" id="sigupmessage"></div>
+            <div class="end-text" id="end-text-sigup">已經有帳戶了?點此登入</div>
+        </div>
+    </div>
+    <script src="http://127.0.0.1:3000/static/book.js"></script>
+</body>
+</html>

@@ -1,10 +1,14 @@
 from flask import *
 from api.attractions import app_api_attractions
+from api.userapi import app_api_user
+from api.booking import app_api_booking
 
 app=Flask(__name__)
 app.config["JSON_AS_ASCII"]=False
 app.config["TEMPLATES_AUTO_RELOAD"]=True
 app.register_blueprint(app_api_attractions)
+app.register_blueprint(app_api_user)
+app.register_blueprint(app_api_booking)
 # Pages
 @app.route("/")
 def index():

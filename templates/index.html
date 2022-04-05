@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./static/style.css" />
-    <title>Document</title>
+    <title>台北一日遊</title>
 </head>
 <body >
     <div class="main_container">
@@ -14,7 +14,7 @@
             <div class="page_title">台北一日遊</div>
             <div class="choose_page">
                 <div class="booking">預定行程</div>
-                <div class="signin_up">登入/註冊</div>
+                <div class="signin_up" id="enter">登入/註冊</div>
             </div>
         </div>
         <div class="header">
@@ -22,7 +22,7 @@
             <div class="header_words">探索每個角落，體驗城市的深度旅遊行程</div>
             <div class="search_bar">
                 <input type="text", class="inputKeywords" placeholder="輸入景點名稱查詢" name="search">
-                <button type="submit" , class="buttonKeywords"><img src="https://s3-alpha-sig.figma.com/img/2287/3bf8/d5750c31481dec07f7101a5fb69baa37?Expires=1648425600&Signature=HcFHbVJ9Z~6ykZtgaXy9msfnDkJGVko6hEflCOYUM09FJjSW67OcIyBO96G1H7rNsahgE9B3lkBSfIdruUoW1joTtzWxWHc8lN3KvfrbyhgBbswq5Cyj9NU7QvkGcb5i77FXoH8lYJweEW080xNlSKGrigdVjsMqzk1PKD5oZtgQFmHiJOcIZjBjI5ghPqIGCSDh5-MrYYKtPf8gth6Jzg0syUH1I-L7DYwuTPGgZhoVWHQttYrtHRfnHbnnXsxSAFw4vONNL1LYJSvcrlJjMFEjU7wVcSP0ZThgu358K3WlvtDMueVhSLeIZ7ZEsMLYvgcpGJvNlI~TMvQrCkXVlA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" ></button>
+                <button type="submit" , class="buttonKeywords" ><img src="https://s3-alpha-sig.figma.com/img/2287/3bf8/d5750c31481dec07f7101a5fb69baa37?Expires=1648425600&Signature=HcFHbVJ9Z~6ykZtgaXy9msfnDkJGVko6hEflCOYUM09FJjSW67OcIyBO96G1H7rNsahgE9B3lkBSfIdruUoW1joTtzWxWHc8lN3KvfrbyhgBbswq5Cyj9NU7QvkGcb5i77FXoH8lYJweEW080xNlSKGrigdVjsMqzk1PKD5oZtgQFmHiJOcIZjBjI5ghPqIGCSDh5-MrYYKtPf8gth6Jzg0syUH1I-L7DYwuTPGgZhoVWHQttYrtHRfnHbnnXsxSAFw4vONNL1LYJSvcrlJjMFEjU7wVcSP0ZThgu358K3WlvtDMueVhSLeIZ7ZEsMLYvgcpGJvNlI~TMvQrCkXVlA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" ></button>
             </div>
         </div>
         <div class="main_content", id="mainContainer">
@@ -30,9 +30,43 @@
         </div>
     </div>
     <div class="endBannar">
-        <div>COPYRIGHT © 2021 台北一日遊<div>
+        <div>COPYRIGHT © 2021 台北一日遊</div>
     </div>
-    
+    <div id="signinModal" class="signinModal">
+        <div class="modal-content" id="sigin-modal-content">
+            <div class="modal-header" >
+                <div class="sig-header">登入會員帳號</div>
+                <div class="close" id="close1">
+                <img src="https://s3-alpha-sig.figma.com/img/0a1f/425f/8de46cdc235bdc9b370c21e0028a68e6?Expires=1649635200&Signature=bMJrhhDp6e-nzgPNVZHpSdDssMZvThaXE62wzPArS5Zn~JtzTzrKqVvgTVJX5PskCbG40AJ3rkxXzGWkVheTJtTeR9fijBxyxNQ6XvVgd53k3gqr4oJtDfYpe62F8EYDPwPtotAtwVCJBP6qb8v2wUi2wYH824V1WoDLbtpPfMjnYFAIQVgac3qXLS2sCKtTcqyoHuLi9GYA3BURl0WDbowtDVzmQGdiOU~VFjRj8oMso7oyvxH~S6xmXJH~VznNFVhQjRP3~R0Gi4l7NPgd7~VJ3Gwwon2Ur9f-AnXM9k38fzW5q0FiRJDiobvPTOG50ZM~Rxn2Zb-Qfon9Luw-Kw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA">
+                </div>
+            </div>
+            <div class="input-block">
+                <input type="text", class="email" placeholder="輸入電子信箱" name="email" id="siginemail"><br>
+                <input type="text", class="password" placeholder="輸入密碼" name="password" id="siginpassword"><br>
+                <input type="submit" , class="sig_bt" value="登入帳戶" id="sigin_bt">
+            </div>
+            <div class="massage" id="siginmessage"></div>
+            <div class="end-text" id="end-text-sigin">還沒有帳戶?點此註冊</div>
+        </div>
+    </div>
+    <div id="signupModal" class="signupModal" >
+        <div class="modal-content" id="sigup-modal-content">
+            <div class="modal-header">
+                <div class="sig-header">註冊會員帳號</div>
+                <div class="close" id="close2">
+                <img src="https://s3-alpha-sig.figma.com/img/0a1f/425f/8de46cdc235bdc9b370c21e0028a68e6?Expires=1649635200&Signature=bMJrhhDp6e-nzgPNVZHpSdDssMZvThaXE62wzPArS5Zn~JtzTzrKqVvgTVJX5PskCbG40AJ3rkxXzGWkVheTJtTeR9fijBxyxNQ6XvVgd53k3gqr4oJtDfYpe62F8EYDPwPtotAtwVCJBP6qb8v2wUi2wYH824V1WoDLbtpPfMjnYFAIQVgac3qXLS2sCKtTcqyoHuLi9GYA3BURl0WDbowtDVzmQGdiOU~VFjRj8oMso7oyvxH~S6xmXJH~VznNFVhQjRP3~R0Gi4l7NPgd7~VJ3Gwwon2Ur9f-AnXM9k38fzW5q0FiRJDiobvPTOG50ZM~Rxn2Zb-Qfon9Luw-Kw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA">
+                </div>
+            </div>
+            <div class="input-block">
+                <input type="text", class="name" placeholder="輸入姓名" name="name" id="sigupname"><br>
+                <input type="text", class="email" placeholder="輸入電子信箱" name="email" id="sigupemail"><br>
+                <input type="text", class="password" placeholder="輸入密碼" name="password" id="siguppassword"><br>
+                <input type="submit" , class="sig_bt" value="註冊新帳戶" id="sigup_bt">
+            </div>
+            <div class="massage" id="sigupmessage"></div>
+            <div class="end-text" id="end-text-sigup">已經有帳戶了?點此登入</div>
+        </div>
+    </div>
 </body>
 <script  src="./static/index.js"></script>
 </html>
