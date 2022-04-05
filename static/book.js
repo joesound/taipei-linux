@@ -340,7 +340,7 @@ function siginInputcheck(){
 
 // call apis
 async function getUserbook(){
-    let response = await fetch(`http://127.0.0.1:3000/api/booking`,{
+    let response = await fetch(`${local}api/booking`,{
         method: 'GET',
         credentials: 'include',
     });
@@ -349,7 +349,7 @@ async function getUserbook(){
 }
 
 async function deleteUserbook(){
-    let response = await fetch(`http://127.0.0.1:3000/api/booking`,
+    let response = await fetch(`${local}api/booking`,
     {method:'DELETE',
     credentials: 'include'});
     let response_to_json = await response.json()
@@ -359,7 +359,7 @@ async function deleteUserbook(){
 
 
 async function sigUp(name, email, password){
-    let response = await fetch(`http://127.0.0.1:3000/api/user`,{
+    let response = await fetch(`${local}api/user`,{
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify({"name":name, "email":email, "password":password})
@@ -369,7 +369,7 @@ async function sigUp(name, email, password){
 }
 
 async function logOut(){
-    let response = await fetch(`http://127.0.0.1:3000/api/user`,
+    let response = await fetch(`${local}api/user`,
         {method:'DELETE',
         credentials: 'include'});
     let response_to_json = await response.json()
@@ -377,7 +377,7 @@ async function logOut(){
 }
 
 async function SigIn(email, password){
-    let response = await fetch(`http://127.0.0.1:3000/api/user`,
+    let response = await fetch(`${local}api/user`,
         {method:'PATCH',
         credentials: 'include',
         body: JSON.stringify({"email":email, "password":password})
@@ -388,7 +388,7 @@ async function SigIn(email, password){
 
 
 async function userStatus(){
-    let response = await fetch(`http://127.0.0.1:3000/api/user`,{
+    let response = await fetch(`${local}api/user`,{
         method: 'GET',
         credentials: 'include',
     });
@@ -402,5 +402,5 @@ async function userStatus(){
 const get_web_title = document.querySelector(".page_title");
 get_web_title.addEventListener("click",()=>{redirect_to_indexPage()})
 function redirect_to_indexPage(){
-    document.location.href = `http://127.0.0.1:3000/`;
+    document.location.href = `${local}`;
 }
