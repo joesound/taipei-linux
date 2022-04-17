@@ -1,9 +1,9 @@
 import mysql.connector
 
-mydb = mysql.connector.connect(     #登入資料庫
+mydb = mysql.connector.connect(     #登入資料庫user
                 host="localhost",
                 user= 'root' ,
-                password= 'root',
+                password= 'Cwl@8506070618',
                 database="taipei_attraction"
                 )
 

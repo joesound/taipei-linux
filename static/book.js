@@ -6,7 +6,7 @@
 
 
 
-
+const local = "http://52.73.173.92:3000"
 
 loadpage()
 
@@ -27,8 +27,8 @@ async function loadpage(){
         getSignblock.textContent = "登出系統"
         getSignblock.className = "logOut"
         const getlogoutblock= document.querySelector(".logOut");
-        getlogoutblock.addEventListener("click", (event)=>{
-            logOut();
+        getlogoutblock.addEventListener("click", async (event)=>{
+            await logOut();
             redirect_to_indexPage();
         })
     }
@@ -37,6 +37,7 @@ async function loadpage(){
     }
     response = await getUserbook();
     if (response["data"]){
+	turn_on_block();
         user_name =  user_status_data["data"]["name"]
         console.log(user_status_data)
         booking_block(user_name, response);
@@ -150,6 +151,19 @@ function book_block_empty(name){
     creatBookingcontent.appendChild(creatBookingheader)
     creatBookingcontent.appendChild(creatNobook)
     getMaincontainer.appendChild(creatBookingcontent)
+
+}
+
+function turn_on_block(){
+    const getAttractionContainer = document.querySelector(".attraction-container");
+    const getContactContainer = document.querySelector(".user-contact-container");
+    const getPaymentContainer = document.querySelector(".payment-container");
+    const getFinalContainer = document.querySelector(".final-submit-container");
+
+    getAttractionContainer.style.display="grid";
+    getContactContainer.style.display="block";
+    getPaymentContainer.style.display="block";
+    getFinalContainer.style.display="flex";
 
 }
 
@@ -340,7 +354,7 @@ function siginInputcheck(){
 
 // call apis
 async function getUserbook(){
-    let response = await fetch(`${local}api/booking`,{
+    let response = await fetch(`${local}/api/booking`,{
         method: 'GET',
         credentials: 'include',
     });
@@ -349,7 +363,7 @@ async function getUserbook(){
 }
 
 async function deleteUserbook(){
-    let response = await fetch(`${local}api/booking`,
+    let response = await fetch(`${local}/api/booking`,
     {method:'DELETE',
     credentials: 'include'});
     let response_to_json = await response.json()
@@ -359,7 +373,7 @@ async function deleteUserbook(){
 
 
 async function sigUp(name, email, password){
-    let response = await fetch(`${local}api/user`,{
+    let response = await fetch(`${local}/api/user`,{
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify({"name":name, "email":email, "password":password})
@@ -369,7 +383,7 @@ async function sigUp(name, email, password){
 }
 
 async function logOut(){
-    let response = await fetch(`${local}api/user`,
+    let response = await fetch(`${local}/api/user`,
         {method:'DELETE',
         credentials: 'include'});
     let response_to_json = await response.json()
@@ -377,7 +391,7 @@ async function logOut(){
 }
 
 async function SigIn(email, password){
-    let response = await fetch(`${local}api/user`,
+    let response = await fetch(`${local}/api/user`,
         {method:'PATCH',
         credentials: 'include',
         body: JSON.stringify({"email":email, "password":password})
@@ -388,7 +402,7 @@ async function SigIn(email, password){
 
 
 async function userStatus(){
-    let response = await fetch(`${local}api/user`,{
+    let response = await fetch(`${local}/api/user`,{
         method: 'GET',
         credentials: 'include',
     });

@@ -1,13 +1,11 @@
 from flask import Flask, render_template, request, session, redirect, url_for, Blueprint, make_response
 import json
 import time
-
-from sympy import Domain
 from utils.creatJWT import creat_user_JWT, decode_user_JWT
 from utils.usercheck import uesr_signin_check, creat_user_check, get_user_by_name
 
 app_api_user = Blueprint('userCRUD', __name__, url_prefix='/api')
-request_url = "127.0.0.1:3000"
+request_url = "http://52.73.173.92:3000"
 
 @app_api_user.route("/user", methods=['GET','POST','DELETE','PATCH', 'OPTIONS'])
 def user_api():
@@ -34,7 +32,7 @@ def user_api():
         name = creat_user_data["name"]
         email = creat_user_data["email"]
         password = creat_user_data["password"]
-        print(creat_user_data)
+        print("post:",creat_user_data)
         code, message = creat_user_check(name, email, password)
         if code == 200:
             get_user_JWT = creat_user_JWT(name, email)
@@ -57,6 +55,7 @@ def user_api():
         response.headers['Access-Control-Allow-Origin']=request_url
         response.headers['Access-Control-Allow-Credentials']= "true"
         response.headers['Access-Control-Allow-Methods']= 'DELETE'
+        print(response.headers)
         return response
 
 
@@ -65,6 +64,7 @@ def user_api():
         signin_user_data = json.loads(request.data)
         email = signin_user_data["email"]
         password = signin_user_data["password"]
+        print(signin_user_data)
         code, message = uesr_signin_check(email, password)
         if code == 200:
             user_name = message["user_info"][1]

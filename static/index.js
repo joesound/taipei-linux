@@ -3,7 +3,7 @@
 
 //reducer for index pageupdate
 
-const local = "http://127.0.0.1:3000/"
+const local = "http://52.73.173.92:3000"
 
 async function pageUpdate(action){ 
 
@@ -307,9 +307,9 @@ async function loadmore(state){ //state {"page:","keyword"}
         getSignblock.textContent = "登出系統"
         getSignblock.className = "logOut"
         const getlogoutblock= document.querySelector(".logOut");
-        getlogoutblock.addEventListener("click", (event)=>{
+        getlogoutblock.addEventListener("click", async (event)=>{
             console.log(event)
-            logOut();
+            await ogOut();
             location.reload();
         })
 
@@ -346,7 +346,7 @@ async function redirect_to_booking(){
 
 
 async function sigUp(name, email, password){
-    let response = await fetch(`${local}api/user`,{
+    let response = await fetch(`${local}/api/user`,{
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify({"name":name, "email":email, "password":password})
@@ -356,7 +356,7 @@ async function sigUp(name, email, password){
 }
 
 async function logOut(){
-    let response = await fetch(`${local}api/user`,
+    let response = await fetch(`${local}/api/user`,
         {method:'DELETE',
         credentials: 'include'});
     let response_to_json = await response.json()
@@ -364,7 +364,7 @@ async function logOut(){
 }
 
 async function SigIn(email, password){
-    let response = await fetch(`${local}api/user`,
+    let response = await fetch(`http://52.73.173.92:3000/api/user`,
         {method:'PATCH',
         credentials: 'include',
         body: JSON.stringify({"email":email, "password":password})
@@ -375,7 +375,7 @@ async function SigIn(email, password){
 
 
 async function userStatus(){
-    let response = await fetch(`${local}api/user`,{
+    let response = await fetch(`${local}/api/user`,{
         method: 'GET',
         credentials: 'include',
     });
@@ -390,7 +390,7 @@ async function userStatus(){
 
 // fetch data for index page
 async function get_attractions(page=0, keyword=''){
-    let response = await fetch(`${local}api/attractions?page=${page}&keyword=${keyword}`);
+    let response = await fetch(`${local}/api/attractions?page=${page}&keyword=${keyword}`);
     let response_to_json = await response.json()
     return response_to_json
 }
@@ -423,7 +423,7 @@ function creat_block(insert_data){
     creat_div_as_block.className = "block";
     creat_div_as_block.id = id;
     creat_div_for_info.className = "info_block";
-
+    creat_div_as_block.style.cursor = "pointer";
     creat_div_for_name.appendChild(text_info_name);
     creat_div_for_mrt.appendChild(text_info_mrt);
     creat_div_for_cat.appendChild(text_info_cat);
@@ -463,11 +463,11 @@ function remove_block(){
 
 
 function redirect_to_attraction(id){
-    document.location.href = `${local}attraction/${id}`;
+    document.location.href = `${local}/attraction/${id}`;
 }
 
 function redirect_to_bookingPage(){
-    document.location.href = `${local}booking`;
+    document.location.href = `${local}/booking`;
 }
 
 

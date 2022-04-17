@@ -38,6 +38,9 @@
     font-size: 16px;
 }
 
+.footer .choose_page div{
+	cursor:pointer;}
+
 .page_title{
     margin: 10px;
     font-size: 30px;
@@ -51,7 +54,7 @@
     grid-template-rows: 106px 37px auto;
     grid-template-columns: auto;
     background-image: 
-    url("https://s3-alpha-sig.figma.com/img/7f11/61f9/05b5cacde05a250ac06b6807d14ef29b?Expires=1647820800&Signature=HiKPVuRkePCI6qsX46pmenyi8z-2jIetuwcP7jQtblgK7r1gKgyajRihIiRWxP24IJI~32uy3e0FqlFtMcQcEKuJ4F6HxJICVs8AYgH2zpED1h8FEiD9AouEAW8GLOuH2iUUQUnNpMAmiKUoD3Oemd6kbjbCg3upOQeMHSEGsZqjLwi8O3HgzDF2lbQfAmNR-xyzLZre-l5O17IRlUiYj5bSjfAOSWakLSLo9wP7~UXuM~yF6hLiuHmC~VDD~7toD8jrpVXIGTc5VpwAyOtijYtYEh1NczFiYfXDLHmnymOnWTDOOXVzWMr3-1URIOognFpTnMo0DLeo5ZEHoGx9qQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"),
+    url("https://s3-alpha-sig.figma.com/img/7f11/61f9/05b5cacde05a250ac06b6807d14ef29b?Expires=1650240000&Signature=gPVLAlZOGgGoVm-vXNQemlbtmYab11WQSdf3StdRzdnbrsNsdJ53a6lGwWIyvd125-Ffdk28EfpIlHE6UFJlROCuRWByoY1HFeSqtbk6pD1-CJf5lIeRRwP0WuTov5pV2yv3lLDA-TioSik8Yr2hdNUKosSxoamn8Jh6z4VVXyh41zrJXPmky22w34G1U4GpUxHDI4zjRZJvb5EbPTYM-YdZ7VwQ5QoBsTsy3vCZwC1SqLOk~l1IeMGcMFR9QLdqM0rF5utK4giaSLcDFSsuI1hq0DMJXpCoELxS4SbSjScS5mKLjlUNP8zGnXJzYQjcqnBtKD4xxaUAXLFeidBqpw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"),
     linear-gradient(135deg, #AADDEE , #66AABB );
     background-repeat: no-repeat,no-repeat;
     background-size: 276px 148px, 100% 100%; 
@@ -102,6 +105,7 @@
     height: 46px;
     border: none;
     font-size: 16px;
+    cursor:pointer;
   }
 
 .main_container .header .search_bar button{
@@ -222,6 +226,7 @@
     border-radius: 5px;
     background-color: white;
     border:1px solid #CCCCCC;
+    cursor:pointer;
 }
 
 .modal-content input[type=submit]{
@@ -229,6 +234,7 @@
     border:1px solid #448899;
     font-size: 19px;
     color:white;
+    cursor:pointer;
 }
 
 .modal-content .end-text{
@@ -237,6 +243,7 @@
     font-size: 16px;
     color: #666666;
     padding-bottom: 15px;
+    cursor:pointer;
 }
 
 
@@ -254,7 +261,8 @@
 
 .close img{
     width: 16px; 
-    height: 16px; 
+    height: 16px;
+   cursor:pointer; 
 }
 
 

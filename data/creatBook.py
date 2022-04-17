@@ -5,7 +5,7 @@ import mysql.connector
 mydb = mysql.connector.connect(     #登入資料庫
                 host="localhost",
                 user= "root" ,
-                password= "root" ,
+                password= "Cwl@8506070618" ,
                 database="taipei_attraction"
                 )
 
@@ -20,7 +20,7 @@ def creat_table(table_style):
 #資料表style
 
 #建立use table(id, name, email)
-book_style = "`BOOKING`(`id` bigint PRIMARY KEY AUTO_INCREMENT, `email` varchar(3000) NOT NULL, `attractionid` bigint NOT NULL ,`date` DATE NOT NULL  ,`time` varchar(255) NOT NULL, `price` varchar(255) NOT NULL, FOREIGN KEY (`attractionId`) REFERENCES `main`(`id`))"
+book_style = "`booking`(`id` bigint PRIMARY KEY AUTO_INCREMENT, `email` varchar(3000) NOT NULL, `attractionid` bigint NOT NULL ,`date` DATE NOT NULL  ,`time` varchar(255) NOT NULL, `price` varchar(255) NOT NULL, FOREIGN KEY (`attractionId`) REFERENCES `main`(`id`))"
 
 creat_table(book_style)
 

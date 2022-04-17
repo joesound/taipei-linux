@@ -1,5 +1,5 @@
 
-const local = "http://127.0.0.1:3000/"
+const local = "http://52.73.173.92:3000"
 
 const get_morning_bt = document.getElementById("morning_bt");
 const get_afternoon_bt = document.getElementById("afternoon_bt");
@@ -151,8 +151,8 @@ async function controller_attraction(id){
         getSignblock.textContent = "登出系統"
         getSignblock.className = "logOut"
         const getlogoutblock= document.querySelector(".logOut");
-        getlogoutblock.addEventListener("click", (event)=>{
-            logOut();
+        getlogoutblock.addEventListener("click", async (event)=>{
+            await logOut();
             location.reload();
         })
     }
@@ -199,7 +199,7 @@ async function redirect_to_booking(){
 
 // fetch data for attration page
 async function get_attraction_by(id){
-    let response = await fetch(local+`api/attraction/${id}`);
+    let response = await fetch(local+`/api/attraction/${id}`);
     let response_to_json = await response.json()
     return response_to_json
 }
@@ -308,7 +308,7 @@ function redirect_to_indexPage(){
 }
 
 function redirect_to_bookingPage(){
-    document.location.href = local+"booking";
+    document.location.href = local+"/booking";
 }
 
 
@@ -535,7 +535,7 @@ function getBookinfo(){
 
 //apis
 async function postBooking(attractionid, date, time, price){
-    let response = await fetch(`${local}api/booking`,{
+    let response = await fetch(`${local}/api/booking`,{
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify({"attractionid":attractionid, "date":date, "time":time, "price":price})
@@ -548,7 +548,7 @@ async function postBooking(attractionid, date, time, price){
 
 
 async function sigUp(name, email, password){
-    let response = await fetch(`${local}api/user`,{
+    let response = await fetch(`${local}/api/user`,{
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify({"name":name, "email":email, "password":password})
@@ -558,7 +558,7 @@ async function sigUp(name, email, password){
 }
 
 async function logOut(){
-    let response = await fetch(`${local}api/user`,
+    let response = await fetch(`${local}/api/user`,
         {method:'DELETE',
         credentials: 'include'});
     let response_to_json = await response.json()
@@ -566,7 +566,7 @@ async function logOut(){
 }
 
 async function SigIn(email, password){
-    let response = await fetch(`${local}api/user`,
+    let response = await fetch(`${local}/api/user`,
         {method:'PATCH',
         credentials: 'include',
         body: JSON.stringify({"email":email, "password":password})
@@ -577,7 +577,7 @@ async function SigIn(email, password){
 
 
 async function userStatus(){
-    let response = await fetch(`${local}api/user`,{
+    let response = await fetch(`${local}/api/user`,{
         method: 'GET',
         credentials: 'include',
     });

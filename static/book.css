@@ -26,13 +26,18 @@
     grid-template-columns: auto auto;
     text-align: right;
     font-size: 16px;
+ 
 }
+
+.footer .choose_page div{
+	cursor:pointer;}
 
 .page_title{
     margin: 10px;
     font-size: 30px;
     font-weight: 1000;
     color: #448899 ;
+    cursor:pointer;
 }
 
 /* .main_container{
@@ -43,6 +48,7 @@
 
 
 .attraction-container{
+    display: none;
     margin-top: 100px;
     border-bottom: 1px solid #E8E8E8;
 }
@@ -110,9 +116,11 @@
     width: 30px;
     margin-bottom: 30px;
     margin-top: 5px;
+    cursor:pointer;
 }
 
 .user-contact-container{
+    display: none;
     margin-top: 44px;
     border-bottom: 1px solid #E8E8E8;
 }
@@ -130,6 +138,7 @@
     border-radius: 5px;
     text-indent: 10px;
     margin-top: 15px;
+    cursor:pointer;
 }
 
 
@@ -165,6 +174,7 @@
 
 
 .payment-container{
+    display: none;
     margin-top: 44px;
     border-bottom: 1px solid #E8E8E8;
 }
@@ -190,6 +200,7 @@
     border-radius: 5px;
     text-indent: 10px;
     margin-top: 15px;
+    cursor:pointer;
 }
 
 
@@ -213,7 +224,7 @@
 
 
 .final-submit-container{
-    display: flex;
+    display: none;
     margin-top: 44px;
     justify-content: end;
 }
@@ -242,6 +253,7 @@
     font-size: 19px;
     color:white;
     border-radius: 5px;
+    cursor:pointer;
 }
 
 .endBannar{
@@ -311,6 +323,7 @@
     border-radius: 5px;
     background-color: white;
     border:1px solid #CCCCCC;
+    cursor:pointer;
 }
 
 .modal-content input[type=submit]{
@@ -318,6 +331,7 @@
     border:1px solid #448899;
     font-size: 19px;
     color:white;
+    cursor:pointer;
 }
 
 .modal-content .end-text{
@@ -326,6 +340,7 @@
     font-size: 16px;
     color: #666666;
     padding-bottom: 15px;
+    cursor:pointer;
 }
 
 
@@ -343,7 +358,8 @@
 
 .close img{
     width: 16px; 
-    height: 16px; 
+    height: 16px;
+    cursor:pointer; 
 }
 
 
@@ -421,21 +437,25 @@
     }
 
     .attraction-container{
+        display: none;
         grid-row: 2/3;
         grid-column: 2/3;
     }
 
     .user-contact-container{
+        display: none;
         grid-row: 3/4;
         grid-column: 2/3;
     }
 
     .payment-container{
+        display: none;
         grid-row: 4/5;
         grid-column: 2/3;
     }
 
     .final-submit-container{
+        display: none;
         grid-row: 5/6;
         grid-column: 2/3;
     }
@@ -489,9 +509,10 @@
     }
 
     .attraction-container{
+        display: none;
         grid-row: 2/3;
         grid-column: 2/4;
-        display: grid;
+        /* display: grid; */
         grid-template-rows: auto auto;
         grid-template-columns:auto auto;
         
@@ -542,6 +563,7 @@
     }
 
     .user-contact-container{
+        display: none;
         grid-row: 3/4;
         grid-column: 2/4;
     }
@@ -551,6 +573,7 @@
     }
 
     .payment-container{
+        display: none;
         grid-row: 4/5;
         grid-column: 2/4;
     }
@@ -559,6 +582,7 @@
     }
 
     .final-submit-container{
+        display: none;
         grid-row: 5/6;
         grid-column: 2/4;
     }
